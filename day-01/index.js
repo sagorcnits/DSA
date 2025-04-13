@@ -6,13 +6,6 @@
 
 */
 
-
-
-
-
-
-
-
 const target_number = 10;
 
 const arr_of_number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
