@@ -1,6 +1,13 @@
-### day 1
+# day 1
 
-# searching algorithom
+### searching algorithom
 
 - linear search
 - binary search
+
+# day 2
+
+### sorting algorithom
+
+- bubble sort
+- selection sort
