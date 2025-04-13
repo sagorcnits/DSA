@@ -13,23 +13,43 @@ arr = 5, 3, 8, 4, 2, 1, 7, 6
 
 
 */
-const bubble_sort = (arr) => {
-    let length = arr.length;
-    for(let i = 0; i < length - 1; i++) {
-            for(let j = 0; j < length - i - 1; j++) {  // 5 
-                console.log(length - i - 1)
-                if(arr[j] > arr[j + 1]) {
-                    [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; 
-                }
+
+function bubbleSort (arr) {
+let length = arr.length; // 8
+// loop through the array
+    for(let i =0; i < length - 1; i ++){
+        // find the largest number in the array
+        for (let s = 0; s < length; s++){
+            if(arr[s] > arr[s+1] ) {
+               [arr[s], arr[s+1]] = [arr[s+1], arr[s]]; 
             }
+        }
+    }
+// return the sorted array
+    return arr;
+}
+
+const sortedArray = bubbleSort(arr);
+console.log(sortedArray); // [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+function selectionSort(arr) {
+    let length = arr.length; // 8
+    // loop through the array
+    for(let i =0; i < length - 1; i ++) {
+        // find the smallest number in the array
+        let maxIndex = i; // 0
+        for (let s = i + 1; s < length; s++){
+            if(arr[s] > arr[maxIndex] ) {
+                maxIndex = s; 
+            }
+        }
+        // swap the smallest number with the first number in the array
+        [arr[i], arr[maxIndex]] = [arr[maxIndex], arr[i]];
     }
 
     return arr;
 }
 
-const bubble_sort_result = bubble_sort(arr);
-console.log("bubble sort: ", bubble_sort_result);
-
-
-
-  
+const sortedArray2 = selectionSort(arr);
+console.log(sortedArray2); // [1, 2, 3, 4, 5, 6, 7, 8]
