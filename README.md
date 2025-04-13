@@ -1,6 +1,6 @@
-## day 1
+### day 1
 
--- searching algorithom
+# searching algorithom
 
 - linear search
 - binary search
